@@ -1,0 +1,35 @@
+#!/bin/bash
+#Description:
+#	记录C_Cpp编程错误及要点
+#
+#History:
+#2015-5-30	megan	段吐核
+#
+
+
+$Point：文件指针值
+		fclose() 前后值不变
+			#printf("fp:%p\n",fp); //0x1382250
+			#printf("ffclose(fp);
+			#printf("fprintf("fp closed:%p\n",fp); //0x1382250
+			#printf("ffp = NULL;  
+			#printf("fprintf("fp = NULL:%p\n",fp); //nil
+
+
+$Point：exit(num) 程序退出
+		可通过该函数退出时携带数字，以便查看错误信息
+		注意：使用该函数时包含头文件<stdlib.h>
+			  否则编译时会产生警告：
+			  #警告：隐式声明与内建函数‘exit’不兼容 [默认启用] exit(EOF);
+
+
+!Error：段吐核
+		1、file模式用单引号时引起段吐核
+				FILE *fp = fopen(file,'r');
+		   解决：用双引号
+				FILE *fp = fopen(file,"r");
+
+
+
+
+
