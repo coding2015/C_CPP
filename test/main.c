@@ -20,10 +20,27 @@ float fun()
 	return x;
 }
 
-void main()
+void test_fun()
 {
 	int intnum = (int)(4.8);
 	float floatnum = (float)(12);
 	intnum = (int)fun();
 	printf("%d",intnum);
+}
+
+/*
+void Print(int x=1, int y=2)
+{
+	printf("%d,%d",x,y);
+}
+*/
+
+void P(int x=1) //error: 无法通过编译 ？？？
+{
+	printf("%d",x);
+}
+
+void main()
+{
+	//Print();
 }
